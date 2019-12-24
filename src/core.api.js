@@ -62,9 +62,14 @@ class OctotreeService {
     this.shouldShowOctotree = this._shouldShowOctotree;
     this.getInvalidTokenMessage = this._getInvalidTokenMessage;
     this.setNodeIconAndText = this._setNodeIconAndText;
+    this.isRepoTreeLoaded = this._isRepoTreeLoaded;
   }
 
   // Private
+  async _isRepoTreeLoaded(isTreeLoaded) {
+    return isTreeLoaded;
+  }
+
   _getAccessToken() {
     return window.extStore.get(window.STORE.TOKEN);
   }

@@ -50,6 +50,9 @@ class TreeView {
               treeData = this._collapse(treeData);
             }
             cb(treeData);
+            
+            // Octotree finished loading the tree.
+            octotree.isRepoTreeLoaded(true);
           }
         });
       })()

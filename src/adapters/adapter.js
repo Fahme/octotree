@@ -20,7 +20,10 @@ class Adapter {
     const folders = {'': []};
     const {path, repo, node} = opts;
 
-    opts.encodedBranch = opts.encodedBranch || encodeURIComponent(decodeURIComponent(repo.branch));
+    opts.encodedBranch = opts.encodedBranch || encodeURIComponent(decodeURIComponent(repo.branch))
+
+    // Octotree started loading the tree.
+    octotree.isRepoTreeLoaded(false);
 
     this._getTree(path, opts, (err, tree) => {
       if (err) return cb(err);
