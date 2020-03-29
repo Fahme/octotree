@@ -167,8 +167,8 @@ class Adapter {
         } else {
           error = 'Forbidden';
           message =
-            'Accessing private repositories requires a GitHub access token. ' +
-            'Please go to <a class="settings-btn">Settings</a> and enter a token.';
+          'A GitHub access token is required to access private repositories, or when the API rate limit is exceeded. ' +
+          'Please go to <a class="settings-btn">Settings</a> and enter a token.';
         }
 
         break;
